@@ -6,6 +6,10 @@ class Task{
 	protected $sendValue = null;
 	protected $beforeFirstYieldFlag = true;
 
+	/**
+	 *	关键参数$coroutine: 运行任务的本质就是执行生成器函数 - send()
+	 *
+	 * */
 	public function __construct($taskId, Generator $coroutine){
 		$this->taskId = $taskId;
 		$this->coroutine = $coroutine;
